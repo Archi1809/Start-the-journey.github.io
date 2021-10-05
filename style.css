@@ -1,0 +1,425 @@
+ *{
+     margin: 0;
+     padding: 0;
+     font-family: 'Poppins', sans-serif;
+ }
+ /*       header          */
+ .header{
+     min-height: 100vh;
+     width: 100%;
+     background-image:linear-gradient(rgba(255, 255, 255, 0.2),rgba(123, 131, 148, 0.2)),url("images/dbthapar.jpg");
+     background-color: rgba(0,0,0,0.5);
+     z-index: 2;
+     background-position: center;
+     background-size: cover;
+     position: relative;
+    }
+nav{
+    display: flex;
+    padding: 1% 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #92130a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #010005;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    background-color: rgba(235, 190, 190, 0.05);
+    font-size: 55px;
+}
+.text-box p{
+    margin: 5px 0 40px;
+    font-size: 15px;
+    font-style: inherit;
+    background-color: rgba(235, 190, 190, 0.05);
+    color: #010002;
+}
+.here{
+    display: inline-block;
+    text-decoration: none;
+    color: beige;
+    border: 1px solid beige;
+    padding: 12px 34px;
+    font-size: 12px;
+    background: rgba(0, 0, 1,0.95);
+    position: relative;
+    cursor: pointer;
+}
+.here:hover{
+    border: 1px solid rgb(150, 87, 45);
+    background: #c57a23ef;
+    transition: 0.6s;
+}
+
+nav .fa{
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: rgba(255, 255, 255, 0.4);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: transform .6s;
+    }
+    .nav-links:hover{
+        transform: scale(0.98); 
+    }
+    nav .fa{
+        display: block;
+        margin: 10px;
+        font-size: 22px;
+        color: rgb(7, 7, 7);
+        cursor: pointer;
+    }
+    .nav-links ul{
+       text-align: center;
+    }
+}
+
+/*    course        */
+.course{
+    width: 90%;
+    margin: 60px 50px;
+    text-align: center;
+    padding-top: 100px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 30%;
+    background-color: rgba(139, 80, 80, 0.15);
+    border-radius: 8px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+.col h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*       campus         */
+.campus{
+    width: 100%;
+    padding-top: 85px;
+    text-align: center;
+    font-size: 50px;
+    margin: auto;
+    background: rgba(210, 180, 140, 0.26);
+}
+p{
+    padding: 10px;
+}
+.pic{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.colpic{
+    flex-basis: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-top: 20px;
+    padding: 10px;
+}
+.colpic img{
+    width: 89%;
+    border-radius: 10px;
+    height: 300px;
+}
+.layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.colpic:hover{
+    box-shadow: 0px 0px 30px 15px rgba(63, 76, 82, 0.31);
+}
+.layer h3{
+    width: 200px;
+    font-weight: 300;
+    /*important code for multicoloring of text till color:transparent*/
+    background-image: linear-gradient(to left, rgb(36, 33, 33), red);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 50%;
+    opacity: 1;
+
+}
+@media(max-width: 700px){
+    .pic{
+        flex-direction: column;
+    }
+}
+
+/*         facilities      */
+.facilities{
+    width: 100%;
+    padding-top: 85px;
+    text-align: center;
+    font-size: 40px;
+    margin: auto;
+    background-color: rgba(139, 80, 80, 0.15);
+}
+.fac{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+.facpic{
+    flex-basis: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-top: 20px;
+    padding: 10px;
+}
+.facpic img{
+    width: 89%;
+    border-radius: 10px;
+    height: 200px;
+}
+.facpic:hover{
+    box-shadow: 0px 0px 30px 15px rgba(63, 76, 82, 0.31);
+}
+.facpic p{
+    padding: 0;
+}
+.facpic h3{
+    margin-top: 16px;
+    margin-bottom: 10px;
+    text-align: inherit;
+    font-weight: 100;
+    font-size: 30px;
+}
+@media(max-width: 700px){
+    .pic{
+        flex-direction: column;
+    }
+}
+/*          placements        */
+.placements{
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 40px;
+    margin: auto;   
+}
+h1{
+    font-size: 35px;
+    font-weight: 600;
+}
+p{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 20px;
+    padding-top: 5px;
+    word-spacing: 7px;
+}
+.plc{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.plcpic{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-top: 20px;
+    padding: 10px;
+}
+.plcpic img{
+    width: 89%;
+    border-radius: 10px;
+}
+.plcpic h3{
+    margin-top: 16px;
+    margin-bottom: 10px;
+    text-align: inherit;
+    font-weight: 100;
+    font-size: 20px;
+}
+.plcpic:hover{
+    box-shadow: 0px 0px 30px 15px rgba(63, 76, 82, 0.31);
+}
+.layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+@media(max-width: 700px){
+    .pic{
+        flex-direction: column;
+    }
+}
+
+/* CONTACT   */
+.con{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(images/thapar2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.con h1{
+    color: rgba(253, 252, 252, 0.918);
+    margin-bottom: 10px;
+    padding: 30px;
+}
+.here-there{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid beige;
+    padding: 12px 25px;
+    font-size: 13px;
+    background: rgba(8, 8, 8, 0.3);
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+}
+@media(max-width: 700px){
+    .con h1{
+        font-size: 24px;
+    }
+}
+
+
+.footer{
+    text-align: center;
+    width: 100%;
+    padding: 30px 0;
+    background-color: rgba(176, 196, 222, 0.418);
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(254, 255, 254);
+    background-color: rgba(126, 155, 185, 0.747);
+}
+.footer p{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.icons{
+    color: rgb(126, 155, 185);
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.icons a{
+    color: black;
+    text-shadow: rgba(9, 79, 82, 0.767);
+    font-size: 37px;
+    text-decoration-style: initial;
+}
+
+.by{
+    margin-top: 20px;
+    background-color: beige;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+}
+.by h3{
+    margin-top: 40px;
+    background-color: rgba(250, 176, 188, 0.747);
+    text-align: center;
+    color: rgb(24, 24, 23);
+}
+.by a{
+    color: black;
+    justify-content: space-between;
+    font-size: 20px;
+}
