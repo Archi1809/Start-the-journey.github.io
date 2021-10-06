@@ -7,7 +7,7 @@
  .header{
      min-height: 100vh;
      width: 100%;
-     background-image:linear-gradient(rgba(255, 255, 255, 0.2),rgba(123, 131, 148, 0.2)),url(dbthapar.jpg");
+     background-image:linear-gradient(rgba(255, 255, 255, 0.2),rgba(123, 131, 148, 0.2)),url("dbthapar.jpg");
      background-color: rgba(0,0,0,0.5);
      z-index: 2;
      background-position: center;
@@ -341,7 +341,7 @@ p{
 .con{
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(images/thapar2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("thapar2.jpg");
     background-position: center;
     background-size: cover;
     border-radius: 10px;
