@@ -1,2 +1,2 @@
 # Start-the-journey.github.io
-my first website adding as repository 
+Tried out basic HTML , CSS and JS concepts to make this static website 
